@@ -14,7 +14,7 @@
 
 /* Fontes extras (a Inter já vem pelo <link> do HTML).
    @import também é CSS — carregamos o resto sem tocar no HTML. */
-
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Ink:wght@100..900&family=Bitcount+Prop+Single:wght@100..900&display=swap');
 
 
 /* =========================================================================
@@ -23,7 +23,56 @@
    Vantagem: mudar um valor aqui muda o site inteiro.
    Sintaxe: --nome-da-variavel: valor;  /  usar com var(--nome-da-variavel)
    ========================================================================= */
+:root{
+    /*--- paleta:tema "cyber figital" ---*/
+    --preto: #412242;/*fundo profundo o espaço*/
+    --preto-suave: rgba(82, 46, 116);/*painéis sobre o fundo*/
+    --preto-card: #904D94;/*cards e placeholders*/
+    --preto-glass: #B25FB7;/*glassmorphism*/
+    /*cor primária ciano elétrico*/
+    --ciano: #ab79bb;
+    --ciano-glow: rgba(82, 46, 116);
+    --ciano-dim: rgba(135, 0, 189, 0.5);
+    --ciano-escuro: rgba(70, 0, 128, 0.541);
 
+    /*cor secundária violeta neon*/
+    --violeta: #a855f7;
+    --violeta-glow: rgba(220, 85, 247, 0.4);
+    --violeta-dim: rgba(85, 42, 122, 0.411);
+
+    /*acento: verde neon*/
+    --verde-neon: rgba(222, 74, 197, 0.4);
+    --verde-dim: rgba(155, 67, 167, 0.411);
+
+    /*textos*/
+    --texto-claro: #f5f5f5;
+    --texto-claro-suave: rgba(245, 245, 245, 0.8);
+    --texto-claro-dim: rgba(245, 245, 245, 0.6);
+
+    /* bordas e linhas */
+    --borda: rgba(195, 0, 255, 0.1);
+    --borda-forte: rgba(121, 0, 151, 0.3);
+    --linha-grid: rgba(132, 0, 255, 0.05);
+
+    /* tipografia */
+    --fonte-display: "Outifit", "Arial Black", sans-serif;
+    --fonte-texto: "Space Grotesk", "Inter", Arial, sans-serif;
+    --fonte-mono: "Space Mono", "Courier New", monospace;
+
+    /* espaçamentos*/
+    --espaco-xs: 0.5rem;
+    --espaco-sm: 0.75rem;
+    --espaco-lg: 3rem;
+    --espaco-lx: 6rem;
+    /*bordas e sombras*/
+    --raio: 12px;
+    --raio-lg: 20px;
+    --raio-pill: 999px;
+    --sombra-ciano: 0 0 40px rgba(102, 0, 122, 0.4),0 24px 48px rgba(78, 0, 88, 0.4);
+    --sombra-violeta: 0 0 40px rgba(168, 85, 247, 0.4),0 24px 48px rgba(0,0,0,0.5);
+    --sombra-card: 0 0 32px rgba(91, 0, 175, 0.2),0 16px 32px rgba(0,0,0,0.4);
+
+}
 
 
 /* =========================================================================
@@ -288,7 +337,7 @@ img, video {
     gap: var(--espaco-xs);
     margin-top: var(--espaco-md);
     padding: 0.9rem 2rem;
-    background: linear-gradient(135deg, var(--ciano), #00a8b5);
+    background: linear-gradient(135deg, var(--ciano), #6d3f74);
     color: var(--preto);
     border-radius: var(--raio-pill);
     font-family: var(--fonte-mono);
@@ -504,7 +553,7 @@ main > section {
     background: linear-gradient(
         135deg,
         var(--texto-claro) 0%,
-        rgba(0, 245, 255, 0.9) 50%,
+        rgba(173, 132, 192, 0.9) 50%,
         var(--violeta) 100%
     );
     -webkit-background-clip: text;
